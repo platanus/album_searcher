@@ -1,0 +1,3 @@
+= simple_form_for :album, url: album_search_path do |f|
+  = f.input 'keyword', input_html: { name: 'keyword', id: 'keyword' }
+  = f.submit 'Search'

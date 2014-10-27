@@ -1,16 +1,12 @@
 - if @albums.length == 0
   h2 There are no albums here, you can search for one!
-  = simple_form_for :album, url: album_search_path do |f|
-    = f.input 'keyword', input_html: { name: 'keyword', id: 'keyword' }
-    = f.submit 'Search'
+  = render 'search_form'
 - else 
   h2 We found the following results
-  = simple_form_for :album, url: album_search_path do |f|
-    = f.input 'keyword', input_html: { name: 'keyword', id: 'keyword' }
-    = f.submit 'Search'
-
+  = render 'search_form'
   ul
     - @albums.each do |album|
       li
-        h3= album.name
+        a href=album.url
+          h3= album.name
         img src=album.art

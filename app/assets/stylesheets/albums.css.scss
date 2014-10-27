@@ -12,6 +12,12 @@ abbr {
   display: none;
 }
 
+li a {
+  color: black;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
 label {
   color: #777;
   display: inline-block;
