@@ -11,14 +11,6 @@ RSpec.describe Finder, type: :model do
     end
   end
 
-  context 'when the external services fail' do
-
-    it 'raises an exception when the API returns an error' do
-      finder.credentials[:key] = 'invalid'
-      expect { finder.search('invalid') }.to raise_error(RuntimeError)
-    end
-  end
-
   context 'when searching with an invalid query' do
 
     it 'returns no results when called with an empty string' do
