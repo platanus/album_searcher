@@ -8,7 +8,6 @@ RSpec.describe Finder, type: :model do
    
     it 'has valid credentials' do
       expect(finder.credentials[:key]).not_to eq(nil)
-      expect(finder.credentials[:secret]).not_to eq(nil)
     end
   end
 

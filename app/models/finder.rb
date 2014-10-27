@@ -3,8 +3,7 @@ class Finder
 
   def initialize
     @results = []
-    @credentials = { key: LASTFM_CONFIG['key'],
-                     secret: LASTFM_CONFIG['secret'] }
+    @credentials = { key: ENV['LASTFM_KEY'] }
   end
 
   # LastFM album search docs
